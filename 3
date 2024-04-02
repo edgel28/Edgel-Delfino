@@ -1,0 +1,33 @@
+JButton btnPlay = new JButton("Play");
+		btnPlay.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				if (p1_choice.getText().equalsIgnoreCase("Rock") && p2_choice.getText().equalsIgnoreCase("Rock")) {
+					JOptionPane.showMessageDialog(null, "Draw");
+				} else if (p1_choice.getText().equalsIgnoreCase("Rock")
+						&& p2_choice.getText().equalsIgnoreCase("Paper")) {
+					JOptionPane.showMessageDialog(null, "Player 2 Wins");
+				} else if (p1_choice.getText().equalsIgnoreCase("Rock")
+						&& p2_choice.getText().equalsIgnoreCase("Scissors")) {
+					JOptionPane.showMessageDialog(null, "Player 1 Wins");
+				} else if (p1_choice.getText().equalsIgnoreCase("Paper")
+						&& p2_choice.getText().equalsIgnoreCase("Rock")) {
+					JOptionPane.showMessageDialog(null, "Player 1 Wins");
+				} else if (p1_choice.getText().equalsIgnoreCase("Paper")
+						&& p2_choice.getText().equalsIgnoreCase("Paper")) {
+					JOptionPane.showMessageDialog(null, "Tie");
+				} else if (p1_choice.getText().equalsIgnoreCase("Paper")
+						&& p2_choice.getText().equalsIgnoreCase("Scissors")) {
+					JOptionPane.showMessageDialog(null, "Player 2 Wins");
+				} else if (p1_choice.getText().equalsIgnoreCase("Scissors")
+						&& p2_choice.getText().equalsIgnoreCase("Rock")) {
+					JOptionPane.showMessageDialog(null, "Player 2 Wins");
+				} else if (p1_choice.getText().equalsIgnoreCase("Scissors")
+						&& p2_choice.getText().equalsIgnoreCase("Paper")) {
+					JOptionPane.showMessageDialog(null, "Player 1 Wins");
+				} else if (p1_choice.getText().equalsIgnoreCase("Scissors")
+						&& p2_choice.getText().equalsIgnoreCase("Scissors")) {
+					JOptionPane.showMessageDialog(null, "Tie");
+				} else {
+					JOptionPane.showMessageDialog(null, "Pick your move");
+				}
