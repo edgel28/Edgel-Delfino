@@ -1,0 +1,91 @@
+import tkinter as tk
+from tkinter import messagebox
+
+# Functions to display the content for each topic
+def show_intro():
+    messagebox.showinfo("Introduction of Programming Language",
+                        "A programming language is a special language that computers understand and use to perform tasks.\n"
+                        "It's a way for humans to give instructions to a computer in a form that the computer can follow.")
+
+def show_operators():
+    messagebox.showinfo("Basic Operators",
+                        "+ Addition: 5 + 3 = 8\n"
+                        "- Subtraction: 5 - 3 = 2\n"
+                        "* Multiplication: 5 * 3 = 15\n"
+                        "/ Division: 5 / 3 = 1.6667\n"
+                        "% Modulus (remainder): 5 % 3 = 2\n"
+                        "* Exponentiation: 5 * 3 = 125\n"
+                        "// Floor Division: 5 // 3 = 1")
+
+def show_algorithms():
+    messagebox.showinfo("Understanding Algorithms",
+                        "Before you start writing code, it’s crucial to plan your approach to solving a problem.\n"
+                        "This planning is done using algorithms and flowcharts.\n"
+                        "An algorithm is a set of step-by-step instructions that, when followed, solve a specific problem or perform a specific task.\n"
+                        "Example: Process of cooking rice:\n"
+                        "1. Put 1 cup of rice in the vessel of an electric rice-cooker.\n"
+                        "2. Put 2 cups of water in the cooker vessel.\n"
+                        "3. Close the lid of the cooker and switch it on.\n"
+                        "4. Wait until the indicator light of the rice-cooker turns off.")
+
+def show_flowchart():
+    messagebox.showinfo("Flowchart Symbols",
+                        "1. Oval (Terminator): Represents the start or end of a process. Example: Start, Stop.\n"
+                        "2. Parallelogram (Input/Output): Represents input or output operations. Example: 'Enter age', 'Read Data'.\n"
+                        "3. Rectangle (Process): Represents a step or action in the process. Example: Calculate, Input data.\n"
+                        "4. Diamond (Decision): Represents a decision point. Example: Yes/No, True/False.\n"
+                        "5. Arrow (Connector): Shows the flow of the process from one step to the next.\n"
+                        "6. Circle (Connector): Used to connect different parts of a flowchart.\n"
+                        "7. Hexagon (Declaration): Used for initializing variables or declaring constants.")
+
+def show_logical_operators():
+    messagebox.showinfo("Logical Operators",
+                        "A logical operator is a symbol or word used to connect two or more expressions.\n"
+                        "Logical AND Operator: AND (&&) Example: a = 6, b = 3, if a < 10 and b > 1, result = True.\n"
+                        "Logical OR Operator: OR (||) Example: a = 3, b = 6, if a == 5 or b == 5, result will evaluate the expressions.\n"
+                        "Logical NOT Operator: NOT (!) Example: If a = 6, result = not (a == b) will return True.")
+
+def show_conditions():
+    messagebox.showinfo("Conditions",
+                        "Conditions are decision-making statements used in programming to decide which path a program takes.\n"
+                        "Example of IF conditions in Python:\n"
+                        "if x > 10:\n"
+                        "    print('x is greater than 10')\n"
+                        "elif x < 10:\n"
+                        "    print('x is less than 10')\n"
+                        "else:\n"
+                        "    print('x is equal to 10')")
+
+# Create main application window
+def create_app():
+    root = tk.Tk()
+    root.title("Programming Language Topics")
+
+    # Set the background color of the main window to gray
+    root.config(bg="gray")
+
+    # Create and place buttons for each topic with skyblue background
+    btn_intro = tk.Button(root, text="Introduction of Programming Language", width=40, command=show_intro, bg="blue", fg="black")
+    btn_intro.pack(pady=10)
+
+    btn_operators = tk.Button(root, text="Basic Operators", width=40, command=show_operators, bg="red", fg="black")
+    btn_operators.pack(pady=10)
+
+    btn_algorithms = tk.Button(root, text="Understanding Algorithms", width=40, command=show_algorithms, bg="green", fg="black")
+    btn_algorithms.pack(pady=10)
+
+    btn_flowchart = tk.Button(root, text="Flowchart Symbols", width=40, command=show_flowchart, bg="skyblue", fg="black")
+    btn_flowchart.pack(pady=10)
+
+    btn_logical_operators = tk.Button(root, text="Logical Operators", width=40, command=show_logical_operators, bg="pink", fg="black")
+    btn_logical_operators.pack(pady=10)
+
+    btn_conditions = tk.Button(root, text="Conditions", width=40, command=show_conditions, bg="orange", fg="black")
+    btn_conditions.pack(pady=10)
+
+    # Start the GUI event loop
+    root.mainloop()
+
+# Run the application
+if  __name__ == "__main__":
+    create_app()
